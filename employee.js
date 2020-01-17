@@ -27,34 +27,43 @@ function runSearch() {
       type: "rawlist",
       message: "What would you like to do?",
       choices: [
-        "View all departments",
+        "View all employees",
         "View all employees by department",
-        "View all roles by employees",
-        "Add a department",
+        "View all employees by manager",
         "Add an employee",
-        "Add a role to employee"
+        "Remove an employee",
+        "Update employee's role",
+        "Update employee's manager"
       ]
     })
     .then(function(answer) {
       switch (answer.action) {
-      case "Find songs by artist":
-        artistSearch();
+      case "View all employees":
+        allEmployees();
         break;
 
-      case "Find all artists who appear more than once":
-        multiSearch();
+      case "View all employees by department":
+        employeesDepartment();
         break;
 
-      case "Find data within a specific range":
-        rangeSearch();
+      case "View all employees by manager":
+        employeesManager();
         break;
 
-      case "Search for a specific song":
-        songSearch();
+      case "Add an employee":
+        addEmployee();
         break;
 
-      case "Find artists with a top song and top album in the same year":
-        songAndAlbumSearch();
+      case "Remove an employee":
+        removeEmployee();
+        break;
+
+        case "Update an employee's role":
+        updateRole();
+        break;
+
+        case "Update an employee's manager":
+        updateManager();
         break;
       }
     });
