@@ -14,12 +14,12 @@ var connection = mysql.createConnection({
   password: "12345678",
   database: "employee_trackerDB"
 });
-
+//this connects to the my sql server and database
 connection.connect(function(err) {
   if (err) throw err;
   runSearch();
 });
-
+// function that runs the prompt
 function runSearch() {
   inquirer
     .prompt({
@@ -46,6 +46,7 @@ function runSearch() {
             }
         })
 }
+//function to add department
 function addDepartment() {
     inquirer
       .prompt([
@@ -69,7 +70,7 @@ function addDepartment() {
         );
       });
   }
-
+//function to add role
   function addRole() {
     inquirer
       .prompt([
@@ -106,7 +107,7 @@ function addDepartment() {
         );
       });
   }
-
+//function to add employee
   function addEmployee() {
     inquirer
       .prompt([
@@ -148,7 +149,7 @@ function addDepartment() {
         );
       });
   }
-  
+  //function to view data
   function viewData() {
     inquirer
       .prompt({

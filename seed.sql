@@ -5,16 +5,16 @@ VALUES ("Operations");
 INSERT INTO department (name)
 VALUES ("Marketing");
 INSERT INTO department (name)
-VALUES ("HR");
+VALUES ("Engineers");
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("Operations Manager", 83000, 1);
+VALUES ("Operations Manager", 83000, 2);
 INSERT INTO role (title, salary, department_id)
-VALUES ("HR Manager", 60000, 3);
+VALUES ("Java Developer", 60000, 4);
 INSERT INTO role (title, salary, department_id)
-VALUES ("CEO", 120000, 2);
+VALUES ("Full Stack Developer", 120000, 4);
 INSERT INTO role (title, salary, department_id)
-VALUES ("Marketing Specialist", 75000, 4);
+VALUES ("Marketing Specialist", 75000, 3);
 
 INSERT INTO employee (first_name, last_name, role_id)
-VALUES ("Alex", "Garcia", 1)
+VALUES ("Alex", "Garcia", 4)
